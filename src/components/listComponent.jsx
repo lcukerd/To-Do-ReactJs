@@ -86,7 +86,8 @@ class List extends Component {
 
   // Toggle mark as Done
   toggleDone = () => {
-    this.setState({ done: !this.state.done });
+    const temp = this.state.done;
+    this.setState({ done: !temp });
     this.update();
   };
 
@@ -100,6 +101,7 @@ class List extends Component {
 
   // Request Parent Component to update TODO
   update = () => {
+    console.log(this.state.done);
     const state = this.state;
     this.props.onUpdate({
       id: state.id,

@@ -75,7 +75,7 @@ class ToDo extends Component {
     this.setState({
       todo: newTodo
     });
-    localStorage.setItem(this.state.userName, JSON.stringify(this.state.todo));
+    localStorage.setItem(this.state.userName, JSON.stringify(newTodo));
   };
 
   // Add a new Todo
@@ -95,7 +95,6 @@ class ToDo extends Component {
 
   // Update an Existing Todo
   updateToDo = todo => {
-    console.log(todo);
     let newTodo = [];
     for (let i = 0; i < this.state.todo.length; i++) {
       if (this.state.todo[i].id === todo.id) {
@@ -112,7 +111,7 @@ class ToDo extends Component {
     this.setState({
       todo: newTodo
     });
-    localStorage.setItem(this.state.userName, JSON.stringify(this.state.todo));
+    localStorage.setItem(this.state.userName, JSON.stringify(newTodo));
   };
 
   // Update Todo Desc
