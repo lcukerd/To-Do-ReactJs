@@ -81,22 +81,26 @@ class List extends Component {
   // Toggle Childrens
   toggleDetail = () => {
     this.setState({ showDetail: !this.state.showDetail });
-    if (this.state.showAction) this.update();
   };
 
   // Toggle mark as Done
   toggleDone = () => {
     const temp = this.state.done;
-    this.setState({ done: !temp });
-    this.update();
+    this.setState({ done: !temp }, () => {
+      this.update();
+    });
   };
 
   // Update Todo Title
   updateInputValue = evt => {
-    this.setState({
-      title: evt.target.value
-    });
-    if (this.state.showAction) this.update();
+    this.setState(
+      {
+        title: evt.target.value
+      },
+      () => {
+        this.update();
+      }
+    );
   };
 
   // Request Parent Component to update TODO

@@ -111,7 +111,7 @@ class ToDo extends Component {
     this.setState({
       todo: newTodo
     });
-    localStorage.setItem(this.state.userName, JSON.stringify(newTodo));
+    localStorage.setItem(this.state.userName, JSON.stringify(this.state.todo));
   };
 
   // Update Todo Desc
