@@ -1,3 +1,17 @@
+### User Accounts
+
+Passwords for users are as following:
+
+User 1 - temp
+
+User 2 - temp2
+
+User 3 - temp3
+
+### Instruction
+
+Edit to todo is stored automatically on updation. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
